@@ -1,0 +1,45 @@
+name               = "test create with TF"
+auth_url           = "https://your-auth-server.example.com/oauth2"
+tenant_domain_name = "your-tenant-domain"
+platform_domain_name = "your-platform-domain"
+
+username           = "your-sca-username"
+password           = "your-sca-password"
+
+csp                = "AWS"
+root_organization_id = "your-root-org-id"
+workspace_id       = "your-workspace-id"
+new_account        = false
+
+roles = [
+  {
+    name = "readonly"
+    description = "Read-only access"
+  },
+  {
+    name = "admin"
+    description = "Admin access"
+  }
+]
+
+identities = [
+  {
+    id   = "entra-group-1"
+    type = "group"
+  }
+]
+
+start_date        = null
+end_date          = null
+
+access_rules = {
+  days                 = ["Monday", "Tuesday"]
+  from_time            = "09:00"
+  to_time              = "17:00"
+  max_session_duration = 8
+  time_zone            = "America/New_York"
+}
+
+aws_region        = "us-east-2"
+aws_profile       = "default"
+secret_name       = "my-aws-secret-name"

@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# dotenv environment variables file
+.env
+.env.*
+
+# Terraform
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+.crash
+*.backup
+.terraform/
+terraform.tfstate.lock.info
+
+# Ignore sensitive or local files you don't want committed
+secret.tfvars
+secret.auto.tfvars
+override.tfvars
+override.tfvars.json
+terraform.tfvars
+*.tfvars
+!terraform.tfvars.example
+
+
+# VS Code settings
+.vscode/
+
+# MacOS files
+.DS_Store
+
+# Logs
+*.log
