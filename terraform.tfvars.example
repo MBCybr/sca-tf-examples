@@ -11,23 +11,28 @@ root_organization_id = "your-root-org-id"
 workspace_id       = "your-workspace-id"
 new_account        = false
 
+# Example roles variable
+# Replace placeholders with real values for your environment
 roles = [
   {
-    name = "readonly"
-    description = "Read-only access"
-  },
-  {
-    name = "admin"
-    description = "Admin access"
+    entity_id        = "arn:aws:sso:::permissionSet/ssoins-<INSTANCE>/ps-<PERMISSIONSET>"
+    entity_source_id = "<SOURCE_ID>"       # e.g., an AWS account ID or Org unit
+    organization_id  = "<ORG_ID>"          # e.g., o-xxxxxxxxxx
+    workspace_type   = "account"           # or another valid type
   }
 ]
 
+
+# Example identities variable
+# Replace placeholders with real values for your environment
 identities = [
   {
-    id   = "entra-group-1"
-    type = "group"
+    entity_name     = "<ENTITY_NAME>"       # e.g., AD Group, EntraID Group, AdminRole, DeveloperGroup
+    entity_source_id = "<SOURCE_ID>"        # e.g., Source ID given to the IDP by CyberArk
+    entity_class     = "role"               # or another valid class (e.g., user, group)
   }
 ]
+
 
 start_date        = null
 end_date          = null
