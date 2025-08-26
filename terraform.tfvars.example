@@ -45,6 +45,7 @@ access_rules = {
   time_zone            = "America/New_York"
 }
 
-aws_region        = "us-east-2"
-aws_profile       = "default"
-secret_name       = "my-aws-secret-name"
+#If using AWS Secrets Manager Example
+#aws_region        = "us-east-2"
+#aws_profile       = "default"
+#secret_name       = "my-aws-secret-name"
